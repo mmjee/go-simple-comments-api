@@ -106,4 +106,5 @@ modules.xml
 
 # Custom
 
+/.env
 /sca
