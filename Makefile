@@ -6,7 +6,7 @@ deps:
 	go mod tidy
 
 build:
-	go build -ldflags "-s -w" -o sca *.go
+	go build -tags=go_json -ldflags "-s -w" -o sca *.go
 	strip ./sca
 
 run:
