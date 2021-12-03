@@ -8,13 +8,14 @@ type SCAError struct {
 const (
 	// Server-side errors
 
-	ERR_SERVER_FAILURE   = 0x01
-	ERR_UPSTREAM_TIMEOUT = 0x02
+	ErrServerFailure   = 0x01
+	ErrUpstreamTimeout = 0x02
 
 	// Client side timeouts
 
-	ERR_INVALID_QUERY      = 0x40
-	ERR_INVALID_PAGINATION = 0x41
+	ErrInvalidQuery      = 0x40
+	ErrInvalidPagination = 0x41
+	ErrInvalidComment    = 0x42
 )
 
 func (api simpleCommentsAPI) constructError(errorCode uint8, errorMessage string) SCAError {

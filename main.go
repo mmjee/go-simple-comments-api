@@ -58,7 +58,8 @@ func main() {
 
 
 	// Routes
-	r.GET("/api/v1/:id/get-comments", api.getCommentsForURL)
+	r.GET("/api/v1/:id/comments", api.getCommentsForURL)
+	r.PUT("/api/v1/:id/comments", api.createCommentForURL)
 
 
 	err = r.Run()
